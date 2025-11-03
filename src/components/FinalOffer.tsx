@@ -13,7 +13,13 @@ const FinalOffer = () => {
   const [showRejection, setShowRejection] = useState(false);
 
   const handleAccept = () => {
-    window.location.href = "https://pay.pagueprotegido.shop/checkout?product=7f9351b9-b6d4-11f0-b47c-46da4690ad53";
+    // Dispara evento Pixel Meta antes de redirecionar
+    if (typeof fbq !== "undefined") {
+      fbq("track", "PurchaseIntent", { content_name: "Presente Abençoado" });
+    }
+
+    // Redireciona para o checkout SnapPay
+    window.location.href = "https://checkout.appsnappay.com/checkout/cmhi8klsv00cuz6s0kpd5fm5o?offer=O59A0F9";
   };
 
   const handleReject = () => {
@@ -122,10 +128,10 @@ const FinalOffer = () => {
             </h3>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4 md:mb-6">
-              <motion.div 
-                whileHover={{ scale: 1.05 }} 
+              <motion.div
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                animate={{ 
+                animate={{
                   boxShadow: [
                     "0 0 20px rgba(74, 222, 128, 0.3)",
                     "0 0 40px rgba(74, 222, 128, 0.5)",
@@ -159,7 +165,7 @@ const FinalOffer = () => {
               </motion.div>
             </div>
 
-            <motion.p 
+            <motion.p
               className="text-xs md:text-sm text-muted-foreground break-words"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

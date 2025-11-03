@@ -9,7 +9,7 @@ const Thanks = () => {
   const navigate = useNavigate();
 
   const handleDownload = () => {
-    window.open("https://drive.google.com/file/d/1ppWqQzmzu1Wc-qb-jyEf__CkTcRvoILS/view?usp=drive_link", "_blank");
+    window.open("/pdf/Jornada.pdf", "_blank");
   };
 
   const handleShare = () => {

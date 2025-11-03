@@ -4,23 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Você conhece a Palavra de Deus? 😱 Quiz Bíblico Desafiador</title>
-    <meta name="description" content="Faça o quiz e descubra se sua fé tá afiada! Mais de 12.000 fiéis já testaram sua sabedoria bíblica. Teste grátis e ganhe um presente especial!" />
+    <meta
+      name="description"
+      content="Faça o quiz e descubra se sua fé está afiada! Mais de 12.000 fiéis já testaram sua sabedoria bíblica. Teste grátis e ganhe um presente especial!"
+    />
     <meta name="author" content="Quiz da Palavra" />
 
+    <!-- Metadados para compartilhamento -->
     <meta property="og:title" content="Você conhece a Palavra de Deus? 😱 Quiz Bíblico Desafiador" />
-    <meta property="og:description" content="Faça o quiz e descubra se sua fé tá afiada! Mais de 12.000 fiéis já testaram. Ganhe um presente especial!" />
+    <meta
+      property="og:description"
+      content="Faça o quiz e descubra se sua fé está afiada! Mais de 12.000 fiéis já testaram. Ganhe um presente especial!"
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:image" content="https://seusite.com/imagem-compartilhamento.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:image" content="https://seusite.com/imagem-compartilhamento.png" />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "844889451321642");
+      fbq("track", "PageView");
+    </script>
+    <!-- End Meta Pixel Code -->
   </head>
 
   <body>
     <div id="root"></div>
+
+    <!-- Pixel fallback para navegadores sem JS -->
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=844889451321642&ev=PageView&noscript=1"
+        alt=""
+      />
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
